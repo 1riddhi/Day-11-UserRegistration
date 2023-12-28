@@ -41,5 +41,18 @@ public class Main {
         } else {
             System.out.println("Invalid email address.");
         }
+
+        String mobileNumber = "91 9919819801";
+        regex = "^\\d{2} [6-9]\\d{9}$";
+
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(mobileNumber);
+
+        if (matcher.matches()) {
+            System.out.println("Valid mobile number.");
+        } else {
+            System.out.println("Invalid mobile number.");
+        }
+
     }
 }
