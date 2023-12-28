@@ -54,5 +54,17 @@ public class Main {
             System.out.println("Invalid mobile number.");
         }
 
+        String password = "Password";
+        regex = "^.{8,}$";
+
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(password);
+
+        if (matcher.matches()) {
+            System.out.println("Valid password. Meets the minimum 8 characters requirement.");
+        } else {
+            System.out.println("Invalid password. Please enter a password with at least 8 characters.");
+        }
+
     }
 }
