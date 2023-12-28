@@ -18,5 +18,15 @@ public class Main {
         } else {
             System.out.println("Invalid first name. First name starts with Cap and has minimum 3 characters.");
         }
+
+        String lastName="Prajapati";
+        pattern=Pattern.compile(regex);
+        matcher= pattern.matcher(lastName);
+
+        if (matcher.matches()) {
+            System.out.println("Valid last name.");
+        } else {
+            System.out.println("Invalid last name. Last name starts with Cap and has minimum 3 characters.");
+        }
     }
 }
