@@ -66,5 +66,18 @@ public class Main {
             System.out.println("Invalid password. Please enter a password with at least 8 characters.");
         }
 
+        regex = "^(?=.*[A-Z]).{8,}$";
+        password="abcDeFgh";
+
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(password);
+
+        if (matcher.matches()) {
+            System.out.println("Valid password. Meets the minimum 8 characters and at least 1 uppercase letter requirement.");
+        } else {
+            System.out.println("Invalid password. Please enter a password with at least 8 characters and atleast 1 uppercase letter.");
+        }
+
+
     }
 }
