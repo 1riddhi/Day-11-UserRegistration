@@ -62,15 +62,6 @@ public class RegexTest {
 
     @ParameterizedTest
     @ValueSource(strings = {
-       "acbdefghA", //no digit
-       "pAssw0rd@+", //2 special char not allowed
-    })
-    public void parameterizedTestInvalidPassword(String invalidPassword) {
-        assertFalse(Regex.isValidPassword(invalidPassword));
-    }
-
-    @ParameterizedTest
-    @ValueSource(strings = {
         "abc@yahoo.com",
         "abc-100@yahoo.com",
         "abc.100@yahoo.com",
@@ -103,5 +94,14 @@ public class RegexTest {
     })
     public void parameterizedTestInvalidEmail(String invalidEmail) {
         assertFalse(Regex.isValidEmail(invalidEmail));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {
+       "acbdefghA", //no digit
+       "pAssw0rd@+", //2 special char not allowed
+    })
+    public void parameterizedTestInvalidPassword(String invalidPassword) {
+        assertFalse(Regex.isValidPassword(invalidPassword));
     }
 }
