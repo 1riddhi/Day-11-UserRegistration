@@ -144,3 +144,4 @@ public class Main {
         }
     }
 }
+//java -cp "c:\Users\Dell\Desktop\GE\Day-11\Day-11-UserRegistration\regex_junit\src\main\java" com.example.Main
