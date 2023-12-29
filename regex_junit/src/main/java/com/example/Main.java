@@ -103,6 +103,44 @@ public class Main {
             System.out.println("Invalid password. Please enter a password with at least 8 characters,atleast 1 digit, atleast 1 uppercase letter,exact 1 special character.");
         }
 
+        sampleEmailTest();
 
+
+    }
+    
+    public static void sampleEmailTest(){
+        String regex = "^[a-zA-Z0-9]+([._%+-]{0,1}[a-zA-Z0-9]+)*@[a-zA-Z0-9]{2,}\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$";
+
+        String[] emails = {
+            "abc@yahoo.com",
+            "abc-100@yahoo.com",
+            "abc.100@yahoo.com",
+            "abc111@abc.com",
+            "abc-100@abc.net",
+            "abc.100@abc.com.au",
+            "abc@1.com",
+            "abc@gmail.com.com",
+            "abc+100@gmail.com",
+            "abc",
+            "abc@.com.my",
+            "abc123@gmail.a",
+            "abc123@.com",
+            "abc123@.com.com",
+            ".abc@abc.com",
+            "abc()*@gmail.com",
+            "abc@%*.com",
+            "abc..2002@gmail.com",
+            "abc.@gmail.com",
+            "abc@abc@gmail.com",
+            "abc@gmail.com.1a",
+            "abc@gmail.com.aa.au"
+        };
+
+        Pattern pattern = Pattern.compile(regex);
+
+        for (String email : emails) {
+            Matcher matcher = pattern.matcher(email);
+            System.out.println(email + ": " + (matcher.matches() ? "Valid" : "Invalid"));
+        }
     }
 }
