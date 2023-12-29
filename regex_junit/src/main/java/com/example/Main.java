@@ -91,5 +91,18 @@ public class Main {
         }
 
 
+        regex = "^(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]*[!@#$%^&*()_=+-][a-zA-Z\\d]*{7,}$";
+        password="abc12De@Fgh";
+
+        pattern = Pattern.compile(regex);
+        matcher = pattern.matcher(password);
+
+        if (matcher.matches()) {
+            System.out.println("Valid password. Meets the minimum 8 characters, atleast 1 uppercase letter, atleast 1 digit, exact 1 special character requirement.");
+        } else {
+            System.out.println("Invalid password. Please enter a password with at least 8 characters,atleast 1 digit, atleast 1 uppercase letter,exact 1 special character.");
+        }
+
+
     }
 }
