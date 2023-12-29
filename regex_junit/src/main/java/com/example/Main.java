@@ -31,7 +31,7 @@ public class Main {
 
         String email1 = "abc.xyz@bl.co.in"; //E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl & co) and 2 optional (xyz & in) with   precise @ and . positions
         
-        regex = "^[a-zA-Z0-9]+([._%+-]{0,1}[a-zA-Z0-9]+)*@[a-zA-Z]{2,}\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$";
+        regex = "^[a-zA-Z0-9]+([._%+-]{0,1}[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}(\\.[a-zA-Z]{2,})?$";
 
         pattern = Pattern.compile(regex);
         matcher = pattern.matcher(email1);
