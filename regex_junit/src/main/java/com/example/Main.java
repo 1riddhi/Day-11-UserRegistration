@@ -91,7 +91,7 @@ public class Main {
         }
 
 
-        regex = "^(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]*[!@#$%^&*()_=+-][a-zA-Z\\d]*{7,}$";
+        regex = "(?=.*[0-9])(?=.*[A-Z])(?=.*[0-9])(?=[a-zA-Z0-9]*[^a-zA-Z0-9][a-zA-Z0-9]*$)(.){8,}";
         password="abc12De@Fgh";
 
         pattern = Pattern.compile(regex);
@@ -144,4 +144,3 @@ public class Main {
         }
     }
 }
-//java -cp "c:\Users\Dell\Desktop\GE\Day-11\Day-11-UserRegistration\regex_junit\src\main\java" com.example.Main
