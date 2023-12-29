@@ -91,7 +91,7 @@ public class Main {
         }
 
 
-        regex = "(?=.*[0-9])(?=.*[A-Z])(?=.*[0-9])(?=[a-zA-Z0-9]*[^a-zA-Z0-9][a-zA-Z0-9]*$)(.){8,}";
+        regex = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[0-9])(?=[a-zA-Z0-9]*[^a-zA-Z0-9][a-zA-Z0-9]*$)(.){8,}$";
         password="abc12De@Fgh";
 
         pattern = Pattern.compile(regex);
