@@ -70,7 +70,7 @@ public class RegexTest {
         "abc.100@abc.com.au",
         "abc@1.com",
         "abc@gmail.com.com",
-        "abc+100@gmail.com"
+        "abc+100@gmail.com",
     })
     public void parameterizedTestValidEmail(String validEmail) {
         assertTrue(Regex.isValidEmail(validEmail));
