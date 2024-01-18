@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 @FunctionalInterface
 interface RegexInterface {
-    boolean check(String regex) throws CustomException;
+    boolean check(String input) throws CustomException;
 }
 
 public class LambdaExpression {
